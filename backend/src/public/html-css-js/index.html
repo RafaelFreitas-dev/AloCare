@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Tag Manager - é recomendado inserir no topo para iniciar first de todos os arquivos-->
+  <script>
+    (function (w, d, s, l, i) {w[l] = w[l] || []; w[l].push({'gtm.start': new Date().getTime(),event: 'gtm.js'
+      });var f = d.getElementsByTagName(s)[0],j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';j.async = true;j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);})(window, document, 'script', 'dataLayer', 'GTM-KFMNKWTK');</script>
+  <!-- End Google Tag Manager -->
+
+  <title>AloCare – Profissionais de Confiança</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png"
+    href="https://icons.iconarchive.com/icons/artdesigner/urban-stories/128/House-icon.png" width="128" height="128">
+
+  <!-- css local-->
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/achar-profissional.css">
+  
+  <!-- css, js externo -->
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" />
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFMNKWTK" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg" id="navbar">
+    <div class="container">
+      <a class="navbar-brand" href="./index.html">
+        <div class="brand-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff">
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+          </svg>
+        </div>
+        AloCare
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav mx-auto gap-1">
+          <li><a class="nav-link" href="#como-funciona">Como funciona</a></li>
+          <li><a class="nav-link" href="#">Planos</a></li> 
+          <li><a class="nav-link fw-semibold" href="./quero-trabalhar.html" style="color:var(--blue)!important">Quero
+              Trabalhar</a></li>
+          <li><a class="nav-link" href="./index.html">Encontrar Profissional</a></li>
+        </ul>
+        <div class="d-flex gap-2 mt-2 mt-lg-0">
+          <a href="./cadastro.html" class="btn btn-outline-primary">Cadastrar grátis</a>
+          <a href="./login.html" class="btn btn-primary">Entrar</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ───────────────────────── -->
+  <section class="hero text-center">
+    <div class="container">
+      <div class="fade-up">
+        <h1>Cuide da sua casa com<br><span>profissionais de confiança.</span></h1>
+        <p class="lead">Conectamos você com os melhores profissionais verificados para qualquer serviço residencial.</p>
+      </div>
+      <div class="fade-up" style="transition-delay:.15s">
+        <div class="search-bar mx-auto">
+          <svg width="18" height="18" fill="none" stroke="#9CA3AF" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8" />
+            <path d="m21 21-4.35-4.35" />
+          </svg>
+          <input type="text" placeholder="Qual serviço você precisa?" />
+          <div class="search-divider"></div>
+          <svg width="18" height="18" fill="none" stroke="#9CA3AF" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+            <circle cx="12" cy="9" r="2.5" />
+          </svg>
+          <input type="text" placeholder="CEP ou Bairro" />
+          <button class="btn-search">Buscar</button>
+        </div>
+        <div>
+          <span class="badge-avail">
+            <span class="dot"></span>
+            <strong>127 profissionais</strong> disponíveis agora perto de você
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SERVICES ──────────────────── -->
+  <section class="services-section">
+    <div class="container">
+      <div class="fade-up">
+        <h2 class="section-title">Serviços para toda a sua casa</h2>
+        <p class="section-sub">Escolha a categoria e encontre o profissional perfeito</p>
+      </div>
+      <div class="tabs-filter fade-up" style="transition-delay:.1s">
+        <button class="tab-pill active" onclick="filterCategory(this,'manutencao')">🔧 Manutenção</button>
+        <button class="tab-pill" onclick="filterCategory(this,'limpeza')">✨ Limpeza</button>
+        <button class="tab-pill" onclick="filterCategory(this,'cuidados')">❤️ Cuidados</button>
+        <button class="tab-pill" onclick="filterCategory(this,'reformas')">🏗️ Reformas</button>
+        <button class="tab-pill" onclick="filterCategory(this,'jardim')">🌿 Jardim & Piscina</button>
+      </div>
+      <div class="row g-3 fade-up" id="servicesGrid" style="transition-delay:.2s">
+        <!-- filled by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── EMERGENCY ─────────────────── -->
+  <section class="emergency-section">
+    <div class="container">
+      <div class="emergency-box fade-up">
+        <div class="row align-items-center mb-4">
+          <div class="col">
+            <h3>⚡ Serviços de Emergência 24h</h3>
+            <p>Problemas urgentes? Profissionais disponíveis agora para atender você</p>
+          </div>
+        </div>
+        <div class="row g-3">
+          <div class="col-md-4">
+            <div class="emergency-card">
+              <div class="eicon">🔑</div>
+              <h6>Chaveiro 24h</h6>
+              <p>Perdeu as chaves ou ficou trancado?</p>
+              <a href="#">Chamar agora →</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="emergency-card">
+              <div class="eicon">🚿</div>
+              <h6>Desentupimento</h6>
+              <p>Emergência com canos e esgotos</p>
+              <a href="#">Chamar agora →</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="emergency-card">
+              <div class="eicon">⚡</div>
+              <h6>Pane Elétrica</h6>
+              <p>Problemas urgentes de eletricidade</p>
+              <a href="#">Chamar agora →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PROFESSIONALS ─────────────── -->
+  <section class="professionals-section">
+    <div class="container">
+      <div class="fade-up">
+        <h2 class="section-title">Profissionais Verificados</h2>
+        <p class="section-sub">Todos os nossos profissionais passam por verificação de antecedentes e avaliação</p>
+      </div>
+      <div class="row g-3 mt-2" id="prosGrid">
+        <!-- filled by JS -->
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ENCONTRAR USUARIOS DISPONIVEIS-->
+  <!-- HERO SEARCH -->
+  <section class="hero">
+    <div class="container position-relative">
+      <div class="row align-items-center">
+        <div class="col-lg-7 fade-up">
+          <h1>Encontre o profissional<br><span>certo para sua casa</span></h1>
+          <p>Verificados, avaliados e prontos para atender você hoje.</p>
+          <div class="search-hero">
+            <div class="sh-field">
+              <svg width="16" height="16" fill="none" stroke="#9CA3AF" stroke-width="2" viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="8" />
+                <path d="m21 21-4.35-4.35" />
+              </svg>
+              <input type="text" id="searchText" placeholder="Que serviço você precisa?" oninput="filterPros()" />
+            </div>
+            <div class="sh-divider"></div>
+            <div class="sh-field">
+              <svg width="16" height="16" fill="none" stroke="#9CA3AF" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+                <circle cx="12" cy="9" r="2.5" />
+              </svg>
+              <input type="text" id="searchLocation" placeholder="CEP ou bairro" oninput="filterPros()" />
+            </div>
+            <button class="sh-btn" onclick="filterPros()">Buscar</button>
+          </div>
+          <div class="trust-bar">
+            <span class="trust-item"><span>✅</span> Profissionais verificados</span>
+            <span class="trust-item"><span>🛡️</span> Pagamento seguro</span>
+            <span class="trust-item"><span>⭐</span> Avaliações reais</span>
+            <span class="trust-item"><span>⚡</span> Resposta em 1h</span>
+          </div>
+        </div>
+        <div class="col-lg-4 offset-lg-1 fade-up d-none d-lg-block" style="transition-delay:.2s">
+          <div
+            style="background:#fff;border-radius:20px;border:1.5px solid var(--border);padding:20px;box-shadow:var(--shadow)">
+            <div
+              style="font-family:'Sora',sans-serif;font-weight:700;font-size:.9rem;margin-bottom:14px;color:var(--dark)">
+              📊 Em tempo real</div>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <div
+                style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--border)">
+                <span style="font-size:.83rem;color:var(--gray)">Profissionais online</span>
+                <span style="font-family:'Sora',sans-serif;font-weight:800;color:var(--green)">127</span>
+              </div>
+              <div
+                style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--border)">
+                <span style="font-size:.83rem;color:var(--gray)">Serviços hoje</span>
+                <span style="font-family:'Sora',sans-serif;font-weight:800;color:var(--blue)">843</span>
+              </div>
+              <div
+                style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--border)">
+                <span style="font-size:.83rem;color:var(--gray)">Avaliação média</span>
+                <span style="font-family:'Sora',sans-serif;font-weight:800;color:#F59E0B">⭐ 4.92</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0">
+                <span style="font-size:.83rem;color:var(--gray)">Tempo médio resposta</span>
+                <span style="font-family:'Sora',sans-serif;font-weight:800;color:var(--blue)">~18 min</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORY PILLS -->
+  <!-- temporariamente removido, pode ser reativado se necessário
+  <div class="cats-bar">
+    <div class="container">
+      <div class="cats-bar-inner" id="catPills"></div>
+    </div>
+  </div>
+  -->
+
+  <!-- MAIN -->
+  <div class="main-layout">
+    <div class="container">
+      <div class="row g-4">
+        <!-- SIDEBAR FILTERS -->
+        <div class="col-lg-3 d-none d-lg-block">
+          <div class="sidebar">
+            <div class="filter-box">
+              <h6>🎯 Filtros</h6>
+              <div class="mb-3">
+                <label class="filter-label">Avaliação mínima</label>
+                <div class="rating-btns">
+                  <button class="rating-btn" onclick="toggleRating(this,'4.5')">4.5+ ⭐</button>
+                  <button class="rating-btn active" onclick="toggleRating(this,'4.0')">4.0+ ⭐</button>
+                  <button class="rating-btn" onclick="toggleRating(this,'all')">Todos</button>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="filter-label">Preço máximo (por serviço)</label>
+                <div class="price-range">
+                  <span>R$</span>
+                  <input type="number" class="filter-input" id="priceMax" placeholder="ex: 300" oninput="filterPros()">
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="filter-label">Disponibilidade</label>
+                <label class="check-item"><input type="checkbox" id="chkAvail" onchange="filterPros()"> Disponível
+                  agora</label>
+                <label class="check-item"><input type="checkbox" id="chkEmerg" onchange="filterPros()"> Atendimento
+                  24h</label>
+                <label class="check-item"><input type="checkbox" id="chkVerif" onchange="filterPros()" checked>
+                  Verificado</label>
+              </div>
+              <div class="mb-2">
+                <label class="filter-label">Distância máxima</label>
+                <select class="filter-input" onchange="filterPros()">
+                  <option>Até 5 km</option>
+                  <option>Até 10 km</option>
+                  <option selected>Até 20 km</option>
+                  <option>Qualquer distância</option>
+                </select>
+              </div>
+              <button class="btn-apply" onclick="filterPros()">Aplicar filtros</button>
+              <button class="btn-clear" onclick="clearFilters()">Limpar filtros</button>
+            </div>
+            <div class="filter-box" style="background:var(--blue-light);border-color:rgba(27,94,247,.2)">
+              <div style="font-size:1.5rem;margin-bottom:8px">⚡</div>
+              <div style="font-family:'Sora',sans-serif;font-weight:700;font-size:.92rem;margin-bottom:6px">Emergência
+                24h</div>
+              <p style="color:var(--gray);font-size:.82rem;margin-bottom:14px">Problema urgente? Profissionais
+                disponíveis agora.</p>
+              <button
+                style="background:var(--orange);color:#fff;border:none;border-radius:10px;padding:10px;width:100%;font-weight:700;font-size:.85rem;cursor:pointer">Chamar
+                agora →</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- RESULTS -->
+        <div class="col-lg-9">
+          <div class="results-header">
+            <div class="results-count">Mostrando <strong id="countDisplay">0</strong> profissionais</div>
+            <div class="d-flex align-items-center gap-3">
+              <select class="sort-select" onchange="filterPros()">
+                <option>Mais bem avaliados</option>
+                <option>Mais próximos</option>
+                <option>Menor preço</option>
+                <option>Mais avaliações</option>
+              </select>
+              <div class="view-toggle">
+                <div class="view-btn active" onclick="setView('grid',this)">▦</div>
+                <div class="view-btn" onclick="setView('list',this)">☰</div>
+              </div>
+            </div>
+          </div>
+          <div id="prosGrid" class="row g-3"></div>
+          <div class="pagination-row" id="pagination"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modal" onclick="if(event.target===this)closeModal()">
+    <div class="modal-box position-relative">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-head" id="modalHead"></div>
+      <div class="modal-body">
+        <div class="tab-nav">
+          <button class="tab-btn active" onclick="switchTab(this,'overview')">Visão geral</button>
+          <button class="tab-btn" onclick="switchTab(this,'reviews')">Avaliações</button>
+          <button class="tab-btn" onclick="switchTab(this,'request')">Solicitar serviço</button>
+        </div>
+        <div class="tab-content active" id="tab-overview"></div>
+        <div class="tab-content" id="tab-reviews"></div>
+        <div class="tab-content" id="tab-request">
+          <div class="request-form">
+            <label>Tipo de serviço</label>
+            <select>
+              <option>Selecione...</option>
+              <option>Instalação</option>
+              <option>Manutenção</option>
+              <option>Reparo</option>
+              <option>Revisão geral</option>
+              <option>Emergência</option>
+            </select>
+            <label>Descrição do problema</label>
+            <textarea rows="3" placeholder="Descreva o que precisa ser feito..."></textarea>
+            <label>Data preferida</label>
+            <input type="date" />
+            <label>Horário preferido</label>
+            <select>
+              <option>Manhã (8h-12h)</option>
+              <option>Tarde (12h-18h)</option>
+              <option>Noite (18h-21h)</option>
+              <option>Urgente – qualquer horário</option>
+            </select>
+            <label>Endereço</label>
+            <input type="text" placeholder="Rua, número, complemento" />
+            <label>Telefone para contato</label>
+            <input type="tel" placeholder="(11) 99999-9999" />
+            <button class="btn-request"
+              onclick="alert('✅ Solicitação enviada! O profissional entrará em contato em breve.')">Enviar solicitação
+              ✓</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- --------------------------------------------------------------------------------- -->
+
+  <!-- ─── CTA ───────────────────────── -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6 fade-up">
+          <div class="cta-card-blue h-100">
+            <div class="cta-icon blue">👤</div>
+            <h4>Para Proprietários</h4>
+            <p>Peça orçamentos em 2 minutos e receba propostas de profissionais qualificados</p>
+            <ul class="checklist">
+              <li><span class="check-dot blue">✓</span> Resposta rápida em até 1 hora</li>
+              <li><span class="check-dot blue">✓</span> Profissionais verificados e avaliados</li>
+              <li><span class="check-dot blue">✓</span> Compare orçamentos e escolha o melhor</li>
+            </ul>
+            <button class="btn-blue-cta">Solicitar Orçamento</button>
+          </div>
+        </div>
+        <div class="col-md-6 fade-up" style="transition-delay:.12s">
+          <div class="cta-card-green h-100">
+            <div class="cta-icon green">💼</div>
+            <h4>Para Profissionais</h4>
+            <p>Aumente sua renda e encontre clientes locais todos os dias</p>
+            <ul class="checklist">
+              <li><span class="check-dot green">✓</span> Acesso a milhares de clientes</li>
+              <li><span class="check-dot green">✓</span> Você escolhe quando e onde trabalhar</li>
+              <li><span class="check-dot green">✓</span> Plataforma segura e suporte dedicado</li>
+            </ul>
+            <button class="btn-green-cta">Começar a Trabalhar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <!-- FOOTER -->
+  <footer
+    style="background:#0D1117; color:rgba(255,255,255,.6); padding:40px 0;text-align:center;border-top:1px solid rgba(255,255,255,.08)">
+    <div class="container">
+      <div style="font-family:'Sora',sans-serif;font-weight:800;color:#fff;font-size:1.1rem;margin-bottom:8px">AloCare
+      </div>
+      <p style="font-size:.85rem; text-align:center;">© 2026.<br>Todos os direitos reservados.</p>
+      <div style="margin-top:12px; text-align:center;">
+        <a href="#" style="color:rgba(255,255,255,.4);font-size:.83rem;text-decoration:none;margin:0 10px">Termos de
+          Uso</a>
+        <a href="#"
+          style="color:rgba(255,255,255,.4);font-size:.83rem;text-decoration:none;margin:0 10px">Privacidade</a>
+        <a href="#" style="color:rgba(255,255,255,.4);font-size:.83rem;text-decoration:none;margin:0 10px">Suporte</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/scripts.js"></script>
+  <script src="./js/achar-profissional.js"></script>
+</body>
+
+</html>

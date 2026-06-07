@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AloCare – Cadastro</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png"
+    href="https://icons.iconarchive.com/icons/artdesigner/urban-stories/128/House-icon.png" width="128" height="128">
+
+  <!-- css -->
+  <link rel="stylesheet" href="./css/styles.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" />
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg" id="navbar">
+    <div class="container">
+      <a class="navbar-brand" href="./index.html">
+        <div class="brand-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff">
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+          </svg>
+        </div>
+        AloCare
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav mx-auto gap-1">
+          <li><a class="nav-link" href="#como-funciona">Como funciona</a></li>
+          <li><a class="nav-link" href="#">Planos</a></li>
+          <li><a class="nav-link fw-semibold" href="./quero-trabalhar.html" style="color:var(--blue)!important">Quero
+              Trabalhar</a></li>
+          <li><a class="nav-link" href="./index.html">Encontrar Profissional</a></li>
+        </ul>
+        <div class="d-flex gap-2 mt-2 mt-lg-0">
+          <a href="./cadastro.html" class="btn btn-outline-primary">Cadastrar grátis</a>
+          <a href="./login.html" class="btn btn-primary">Entrar</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Tela de Cadastro -->
+  <div class="bg-light">
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+      <div class="card shadow p-4" style="width: 25rem; border-radius: 10px;">
+        <h3 class="text-center mb-4" style="color: rgb(71, 126, 177);"> Cadastro </h3>
+        <form>
+          <div class="mb-3">
+            <label for="nome" class="form-label">Nome Completo</label>
+            <input type="text" class="form-control" id="nome" placeholder="Seu nome" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">E-mail</label>
+            <input type="email" class="form-control" id="email" placeholder="seuemail@exemplo.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="senha" class="form-label">Senha</label>
+            <input type="password" class="form-control" id="senha" placeholder="********" required>
+          </div>
+          <div class="mb-3">
+            <label for="tipo" class="form-label">Tipo de Usuário</label>
+            <select class="form-select" id="tipo" required>
+              <option value="">Selecione...</option>
+              <option value="cliente">Cliente</option>
+              <option value="prestador">Prestador de Serviço</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Cadastrar</button>
+        </form>
+        <div class="text-center mt-3">
+          <small>Já tem conta? <a href="./login.html">Faça login</a></small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer
+    style="background:#0D1117; color:rgba(255,255,255,.6); padding:40px 0;text-align:center;border-top:1px solid rgba(255,255,255,.08)">
+    <div class="container">
+      <div style="font-family:'Sora',sans-serif;font-weight:800;color:#fff;font-size:1.1rem;margin-bottom:8px">AloCare
+      </div>
+      <p style="font-size:.85rem; text-align:center;">© 2026.<br>Todos os direitos reservados.</p>
+      <div style="margin-top:12px; text-align:center;">
+        <a href="#" style="color:rgba(255,255,255,.4);font-size:.83rem;text-decoration:none;margin:0 10px">Termos de
+          Uso</a>
+        <a href="#"
+          style="color:rgba(255,255,255,.4);font-size:.83rem;text-decoration:none;margin:0 10px">Privacidade</a>
+        <a href="#" style="color:rgba(255,255,255,.4);font-size:.83rem;text-decoration:none;margin:0 10px">Suporte</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

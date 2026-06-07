@@ -1,0 +1,197 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Usuario {
+  id              String   @id @default(uuid())
+  nome            String
+  email           String   @unique
+  senha           String
+  telefone        String?
+  cpf             String?
+  foto            String?
+  tipo            TipoUsuario
+  ativo           Boolean @default(true)
+  criadoEm        DateTime @default(now())
+  atualizadoEm    DateTime @updatedAt
+  cliente         Cliente?
+  prestador       Prestador?
+  carteira        Carteira?
+}
+
+model Cliente {
+  id              String @id @default(uuid())
+  usuarioId       String @unique
+  usuario         Usuario @relation(fields:[usuarioId], references:[id])
+  pedidos         Pedido[]
+}
+
+model Prestador {
+  id                  String @id @default(uuid())
+  usuarioId           String @unique
+  descricao           String?
+  experiencia         String?
+  notaMedia           Float @default(0)
+  verificado          Boolean @default(false)
+  usuario             Usuario @relation(fields:[usuarioId], references:[id])
+  servicos            PrestadorServico[]
+  avaliacoes          Avaliacao[]
+  contaBancaria       ContaBancaria?
+}
+
+model Categoria {
+  id          String @id @default(uuid())
+  nome        String
+  servicos    Servico[]
+}
+
+model Servico {
+  id          String @id @default(uuid())
+  nome        String
+  categoriaId String
+  categoria   Categoria @relation(fields:[categoriaId], references:[id])
+  prestadores PrestadorServico[]
+}
+
+model Pedido {
+  id                  String @id @default(uuid())
+  clienteId           String
+  prestadorId         String?
+  titulo              String
+  descricao           String
+  valor               Decimal @db.Decimal(10,2)
+  status              StatusPedido
+  criadoEm            DateTime @default(now())
+  cliente             Cliente @relation(fields:[clienteId], references:[id])
+  pagamento           Pagamento?
+}
+
+model Proposta {
+  id                  String @id @default(uuid())
+  pedidoId            String
+  prestadorId         String
+  valor               Decimal @db.Decimal(10,2)
+  mensagem            String?
+  aceita              Boolean?
+  criadoEm            DateTime @default(now())
+}
+
+model Pagamento {
+  id                  String @id @default(uuid())
+  pedidoId            String @unique
+  valor               Decimal @db.Decimal(10,2)
+  taxaPlataforma      Decimal @db.Decimal(10,2)
+  valorPrestador      Decimal @db.Decimal(10,2)
+  status              StatusPagamento
+  gateway             String
+  transactionId       String?
+  criadoEm            DateTime @default(now())
+  pedido              Pedido @relation(fields:[pedidoId], references:[id])
+}
+
+model Carteira {
+  id                  String @id @default(uuid())
+  usuarioId           String @unique
+  saldoDisponivel     Decimal @db.Decimal(10,2) @default(0)
+  saldoBloqueado      Decimal @db.Decimal(10,2) @default(0)
+  usuario             Usuario @relation(fields:[usuarioId], references:[id])
+  movimentacoes       MovimentacaoCarteira[]
+}
+
+model MovimentacaoCarteira {
+  id                  String @id @default(uuid())
+  carteiraId          String
+  tipo                TipoMovimentacao
+  valor               Decimal @db.Decimal(10,2)
+  descricao           String
+  criadoEm            DateTime @default(now())
+  carteira            Carteira @relation(fields:[carteiraId], references:[id])
+}
+
+model ContaBancaria {
+  id                  String @id @default(uuid())
+  prestadorId         String @unique
+  banco               String
+  agencia             String?
+  conta               String?
+  chavePix            String?
+  tipoPix             String?
+  prestador           Prestador @relation(fields:[prestadorId], references:[id])
+}
+
+model Saque {
+  id                  String @id @default(uuid())
+  carteiraId          String
+  valor               Decimal @db.Decimal(10,2)
+  status              StatusSaque
+  solicitadoEm        DateTime @default(now())
+  processadoEm        DateTime?
+  carteira            Carteira @relation(fields:[carteiraId], references:[id])
+}
+
+model Avaliacao {
+  id                  String @id @default(uuid())
+  prestadorId         String
+  nota                Int
+  comentario          String?
+  criadoEm            DateTime @default(now())
+  prestador           Prestador @relation(fields:[prestadorId], references:[id])
+}
+
+model Conversa {
+  id                  String @id @default(uuid())
+  pedidoId            String
+  mensagens           Mensagem[]
+}
+
+model Mensagem {
+  id                  String @id @default(uuid())
+  conversaId          String
+  remetenteId         String
+  texto               String
+  enviadoEm           DateTime @default(now())
+}
+
+// Enums
+
+enum TipoUsuario {
+  CLIENTE
+  PRESTADOR
+  ADMIN
+}
+
+enum StatusPedido {
+  ABERTO
+  PROPOSTA_ENVIADA
+  ACEITO
+  EM_ANDAMENTO
+  CONCLUIDO
+  CANCELADO
+}
+
+enum StatusPagamento {
+  PENDENTE
+  APROVADO
+  RETIDO
+  LIBERADO
+  ESTORNADO
+}
+
+enum StatusSaque {
+  PENDENTE
+  PROCESSANDO
+  PAGO
+  RECUSADO
+}
+
+enum TipoMovimentacao {
+  CREDITO
+  DEBITO
+  SAQUE
+  COMISSAO
+}

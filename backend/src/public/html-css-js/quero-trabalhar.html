@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AloCare - Quero Trabalhar</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png"
+    href="https://icons.iconarchive.com/icons/artdesigner/urban-stories/128/House-icon.png" width="128" height="128">
+
+  <!-- css -->
+  <link rel="stylesheet" href="./css/quero-trabalhar.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" />
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg" id="navbar">
+    <div class="container">
+      <a class="navbar-brand" href="./index.html">
+        <div class="brand-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff">
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+          </svg>
+        </div>
+        AloCare
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav mx-auto gap-1">
+          <li><a class="nav-link" href="#como-funciona">Como funciona</a></li>
+          <li><a class="nav-link" href="#planos">Planos</a></li>
+          <li><a class="nav-link fw-semibold" href="./quero-trabalhar.html" style="color:var(--blue)!important">Quero
+              Trabalhar</a></li>
+          <li><a class="nav-link" href="./index.html">Encontrar Profissional</a></li>
+        </ul>
+        <div class="d-flex gap-2 mt-2 mt-lg-0">
+          <a href="./cadastro.html" class="btn btn-outline-primary">Cadastrar</a>
+          <a href="./login.html" class="btn btn-primary">Entrar</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="grid-lines"></div>
+    <div class="container position-relative">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 fade-up">
+          <span class="hero-badge"><span class="dot"></span> +3.200 profissionais já cadastrados</span>
+          <h1>Transforme sua<br><span>habilidade em renda</span><br>todo dia</h1>
+          <p>Cadastre-se gratuitamente, defina seu horário e receba pedidos de clientes verificados perto de você.</p>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="num">R$4.800</div>
+              <div class="lbl">Média mensal</div>
+            </div>
+            <div class="stat-item">
+              <div class="num">127+</div>
+              <div class="lbl">Clientes por bairro</div>
+            </div>
+            <div class="stat-item">
+              <div class="num">24h</div>
+              <div class="lbl">Primeiro pedido</div>
+            </div>
+          </div>
+          <div class="d-flex gap-3 mt-4 flex-wrap">
+            <button class="btn-primary-nav px-4 py-3" style="font-size:1rem"
+              onclick="document.getElementById('cadastro').scrollIntoView({behavior:'smooth'})">Cadastrar grátis
+              →</button>
+            <button class="btn-outline-nav px-4 py-3" style="font-size:1rem">Ver como funciona</button>
+          </div>
+        </div>
+        <div class="col-lg-6 fade-up" style="transition-delay:.2s">
+          <div class="hero-visual">
+            <div class="floating-badge fb1">⭐ 4.9 <span style="color:#6B7280;font-weight:400">Carlos S.</span></div>
+            <div class="earnings-card">
+              <h5>💰 Ganhos desta semana</h5>
+              <div class="earning-row">
+                <span class="service">🔧 Instalação elétrica</span>
+                <span class="amount">R$ 320</span>
+              </div>
+              <div class="earning-row">
+                <span class="service">❄️ Ar-condicionado</span>
+                <span class="amount">R$ 280</span>
+              </div>
+              <div class="earning-row">
+                <span class="service">💡 Troca de tomadas</span>
+                <span class="amount">R$ 150</span>
+              </div>
+              <div class="earning-row">
+                <span class="service">🏠 Revisão geral</span>
+                <span class="amount">R$ 420</span>
+              </div>
+              <div class="total-row">
+                <span>Total da semana</span>
+                <strong>R$ 1.170</strong>
+              </div>
+            </div>
+            <div class="floating-badge fb2">✅ <span style="color:#22C55E;font-weight:700">Pagamento recebido!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="como-funciona" class="steps-section">
+    <div class="container">
+      <div class="text-center fade-up">
+        <span class="section-tag">Processo simples</span>
+        <h2 class="section-title mt-2">Como funciona para<br>profissionais</h2>
+      </div>
+
+      <!--cards -->
+      <div class="row g-3 mt-4 align-items-stretch">
+        <div class="col-md-3 col-sm-6">
+          <div class="step-card" data-num="01">
+            <div class="step-icon">📝</div>
+            <h5>Crie seu perfil</h5>
+            <p>Cadastre-se em minutos. Adicione suas habilidades, foto e área de atendimento.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="step-card" data-num="02">
+            <div class="step-icon">🔍</div>
+            <h5>Receba pedidos</h5>
+            <p>Clientes da sua região solicitam serviços. Você recebe notificações em tempo real.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="step-card" data-num="03">
+            <div class="step-icon">🏠</div>
+            <h5>Realize o serviço</h5>
+            <p>Vá até o cliente, execute o trabalho com qualidade. O pagamento já está garantido.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="step-card" data-num="04">
+            <div class="step-icon">💸</div>
+            <h5>Receba o pagamento</h5>
+            <p>Após a conclusão, o valor cai na sua conta em até 1 dia útil.</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="categories-section">
+    <div class="container">
+      <div class="text-center fade-up">
+        <span class="section-tag">Categorias disponíveis</span>
+        <h2 class="section-title mt-2">Em qual área você<br>quer trabalhar?</h2>
+        <p class="section-sub mt-2">Selecione quantas quiser ao criar seu perfil</p>
+      </div>
+      <div class="row g-3 mt-4" id="catsGrid"></div>
+    </div>
+  </section>
+
+  <!-- EARNINGS CALCULATOR -->
+  <section class="calc-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5 fade-up">
+          <span class="section-tag" style="background:rgba(27,94,247,.2);color:#60A5FA">Calculadora</span>
+          <h2 class="section-title mt-2">Quanto você pode<br>ganhar por mês?</h2>
+          <p class="section-sub text-start mt-3" style="color:rgba(255,255,255,.6)">Simule seus ganhos com base na sua
+            categoria e disponibilidade.</p>
+          <div class="mt-4">
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <div
+                style="background:rgba(255,255,255,.05);border-radius:12px;padding:16px;display:flex;align-items:center;gap:12px">
+                <span style="font-size:1.4rem">✅</span>
+                <div>
+                  <div style="color:#fff;font-weight:600;font-size:.9rem">Sem taxa de cadastro</div>
+                  <div style="color:rgba(255,255,255,.5);font-size:.8rem">Comece a ganhar de graça</div>
+                </div>
+              </div>
+              <div
+                style="background:rgba(255,255,255,.05);border-radius:12px;padding:16px;display:flex;align-items:center;gap:12px">
+                <span style="font-size:1.4rem">📅</span>
+                <div>
+                  <div style="color:#fff;font-weight:600;font-size:.9rem">Você define o horário</div>
+                  <div style="color:rgba(255,255,255,.5);font-size:.8rem">Trabalhe quando quiser</div>
+                </div>
+              </div>
+              <div
+                style="background:rgba(255,255,255,.05);border-radius:12px;padding:16px;display:flex;align-items:center;gap:12px">
+                <span style="font-size:1.4rem">🛡️</span>
+                <div>
+                  <div style="color:#fff;font-weight:600;font-size:.9rem">Pagamento garantido</div>
+                  <div style="color:rgba(255,255,255,.5);font-size:.8rem">Nunca trabalhe sem receber</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 offset-lg-1 fade-up" style="transition-delay:.15s">
+          <div class="calc-box">
+            <label class="form-label" style="color:rgba(255,255,255,.8)">Categoria de serviço</label>
+            <select class="select-service" id="calcCat" onchange="calcEarnings()">
+              <option value="180">🔧 Eletricista</option>
+              <option value="150">🔨 Encanador</option>
+              <option value="120">🎨 Pintor</option>
+              <option value="100">🧹 Faxineira</option>
+              <option value="200">❄️ Técnico de Ar-Condicionado</option>
+              <option value="90">🌿 Jardineiro</option>
+              <option value="130">🔑 Chaveiro</option>
+              <option value="110">🪚 Marceneiro</option>
+            </select>
+            <div class="range-group">
+              <label>Dias por semana <span id="daysVal">4 dias</span></label>
+              <input type="range" min="1" max="7" value="4" id="daysRange"
+                oninput="document.getElementById('daysVal').textContent=this.value+' dias';calcEarnings()">
+            </div>
+            <div class="range-group">
+              <label>Horas por dia <span id="hoursVal">6 horas</span></label>
+              <input type="range" min="2" max="12" value="6" id="hoursRange"
+                oninput="document.getElementById('hoursVal').textContent=this.value+' horas';calcEarnings()">
+            </div>
+            <div class="range-group">
+              <label>Serviços por dia <span id="jobsVal">3 serviços</span></label>
+              <input type="range" min="1" max="8" value="3" id="jobsRange"
+                oninput="document.getElementById('jobsVal').textContent=this.value+' serviços';calcEarnings()">
+            </div>
+            <div class="result-box">
+              <p>Estimativa mensal de ganhos</p>
+              <div class="amount" id="calcResult">R$ 0</div>
+              <small>*Estimativa baseada na média da plataforma. Pode variar conforme demanda e região.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="text-center fade-up">
+        <span class="section-tag">Depoimentos</span>
+        <h2 class="section-title mt-2">Profissionais que já<br>estão lucrando</h2>
+      </div>
+      <div class="row g-4 mt-3" id="testiGrid"></div>
+    </div>
+  </section>
+
+  <!-- PLANS -->
+  <section class="plans-section">
+    <div class="container">
+      <div id="planos" class="text-center fade-up">
+        <span class="section-tag">Planos</span>
+        <h2 class="section-title mt-2">Escolha o melhor plano<br>para você</h2>
+        <p class="section-sub mt-2">Comece grátis. Sem cartão de crédito.</p>
+      </div>
+
+      <!-- Free -->
+      <div class="row g-4 mt-3 justify-content-center">
+        <div class="col-md-4 fade-up" style="transition-delay:.05s">
+          <div class="plan-card">
+            <h4>Gratuito</h4>
+            <div style="color:var(--gray);font-size:.88rem">Ideal para começar</div>
+            <div class="price">R$0<small>/mês</small></div>
+            <ul class="plan-features">
+              <li><span class="feat-check">✓</span> Perfil básico</li>
+              <li><span class="feat-check">✓</span> 5 propostas/mês</li>
+              <li><span class="feat-check">✓</span> Chat com clientes</li>
+              <li><span class="feat-x">✗</span> <span style="color:var(--gray)">Destaque nos resultados</span></li>
+              <li><span class="feat-x">✗</span> <span style="color:var(--gray)">Antecipação de pagamento</span></li>
+              <li><span class="feat-x">✗</span> <span style="color:var(--gray)">Suporte prioritário</span></li>
+            </ul>
+            <button class="btn-plan-outline">Começar grátis</button>
+          </div>
+        </div>
+
+
+        <!-- Mais Popular -->
+        <div class="col-md-4 fade-up" style="transition-delay:.1s">
+          <div class="plan-card featured">
+            <span class="plan-badge">⭐ Mais popular</span>
+            <h4>Pro</h4>
+            <div style="color:var(--gray);font-size:.88rem">Para quem quer crescer</div>
+            <div class="price" style="color:var(--blue)">R$ 49<small>/mês</small></div>
+            <ul class="plan-features">
+              <li><span class="feat-check">✓</span> Perfil completo + vídeo</li>
+              <li><span class="feat-check">✓</span> Propostas ilimitadas</li>
+              <li><span class="feat-check">✓</span> Chat com clientes</li>
+              <li><span class="feat-check">✓</span> Destaque nos resultados</li>
+              <li><span class="feat-check">✓</span> Antecipação de pagamento</li>
+              <li><span class="feat-x">✗</span> <span style="color:var(--gray)">Suporte prioritário 24h</span></li>
+            </ul>
+            <button class="btn-plan-fill">Assinar Pro</button>
+          </div>
+        </div>
+
+        <!-- Elite -->
+        <div class="col-md-4 fade-up" style="transition-delay:.15s">
+          <div class="plan-card">
+            <h4>Elite</h4>
+            <div style="color: var(--gray); font-size:.88rem">Para os melhores da plataforma</div>
+            <div class="price">R$ 99<small>/mês</small></div>
+            <ul class="plan-features">
+              <li><span class="feat-check">✓</span> Perfil verificado + badge</li>
+              <li><span class="feat-check">✓</span> Propostas ilimitadas</li>
+              <li><span class="feat-check">✓</span> Chat com clientes</li>
+              <li><span class="feat-check">✓</span> Topo dos resultados</li>
+              <li><span class="feat-check">✓</span> Antecipação em 1h</li>
+              <li><span class="feat-check">✓</span> Suporte prioritário 24h</li>
+            </ul>
+            <button class="btn-plan-outline">Assinar Elite</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNUP FORM -->
+  <section class="signup-section" id="cadastro">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="text-center mb-4 fade-up">
+            <h2 class="section-title" style="color:#fff">Cadastre-se agora,<br>é gratuito</h2>
+            <p style="color:rgba(255,255,255,.6)">Em menos de 5 minutos você está pronto para receber pedidos</p>
+          </div>
+          <div class="signup-box fade-up" style="transition-delay:.1s">
+            <!-- Progress -->
+            <div class="progress-steps mb-4" id="progressSteps">
+              <div class="prog-step">
+                <div class="prog-dot active" id="dot1">1</div>
+                <div class="prog-label active">Dados pessoais</div>
+              </div>
+              <div class="prog-step">
+                <div class="prog-dot pending" id="dot2">2</div>
+                <div class="prog-label">Serviços</div>
+              </div>
+              <div class="prog-step">
+                <div class="prog-dot pending" id="dot3">3</div>
+                <div class="prog-label">Localização</div>
+              </div>
+              <div class="prog-step">
+                <div class="prog-dot pending" id="dot4">4</div>
+                <div class="prog-label">Documentos</div>
+              </div>
+            </div>
+
+            <!-- Step 1 -->
+            <div class="form-step active" id="step1">
+              <h5 style="color:#fff;margin-bottom:24px">👤 Dados pessoais</h5>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label">Nome completo</label>
+                  <input type="text" class="form-control-dark" placeholder="Seu nome" />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">WhatsApp</label>
+                  <input type="tel" class="form-control-dark" placeholder="(11) 99999-9999" />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">E-mail</label>
+                  <input type="email" class="form-control-dark" placeholder="seu@email.com" />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">CPF</label>
+                  <input type="text" class="form-control-dark" placeholder="000.000.000-00" />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Senha</label>
+                  <input type="password" class="form-control-dark" placeholder="Mínimo 8 caracteres" />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Confirmar senha</label>
+                  <input type="password" class="form-control-dark" placeholder="Repita a senha" />
+                </div>
+              </div>
+              <div class="d-flex justify-content-end mt-4">
+                <button class="btn-next" onclick="nextStep(2)">Próximo →</button>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="form-step" id="step2">
+              <h5 style="color:#fff;margin-bottom:8px">🔧 Quais serviços você oferece?</h5>
+              <p style="color:rgba(255,255,255,.5);font-size:.85rem;margin-bottom:20px">Selecione todos que se aplicam
+              </p>
+              <div id="skillsChips"></div>
+              <div class="mt-4">
+                <label class="form-label">Anos de experiência</label>
+                <select class="form-control-dark">
+                  <option>Menos de 1 ano</option>
+                  <option>1 a 3 anos</option>
+                  <option>3 a 5 anos</option>
+                  <option>5 a 10 anos</option>
+                  <option>Mais de 10 anos</option>
+                </select>
+              </div>
+              <div class="mt-3">
+                <label class="form-label">Sobre você (breve descrição)</label>
+                <textarea class="form-control-dark" rows="3"
+                  placeholder="Fale sobre sua experiência, diferenciais..."></textarea>
+              </div>
+              <div class="d-flex justify-content-between mt-4">
+                <button class="btn-back" onclick="nextStep(1)">← Voltar</button>
+                <button class="btn-next" onclick="nextStep(3)">Próximo →</button>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="form-step" id="step3">
+              <h5 style="color:#fff;margin-bottom:24px">📍 Área de atendimento</h5>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label">CEP</label>
+                  <input type="text" class="form-control-dark" placeholder="00000-000" />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Cidade</label>
+                  <input type="text" class="form-control-dark" placeholder="Sua cidade" />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Estado</label>
+                  <select class="form-control-dark">
+                    <option>São Paulo</option>
+                    <option>Rio de Janeiro</option>
+                    <option>Minas Gerais</option>
+                    <option>Bahia</option>
+                    <option>Paraná</option>
+                    <option>Outros</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Raio de atendimento</label>
+                  <select class="form-control-dark">
+                    <option>Até 5 km</option>
+                    <option>Até 10 km</option>
+                    <option>Até 20 km</option>
+                    <option>Até 50 km</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Disponibilidade</label>
+                  <div class="d-flex gap-2 flex-wrap mt-2">
+                    <span class="skill-chip selected">Segunda</span><span class="skill-chip selected">Terça</span>
+                    <span class="skill-chip selected">Quarta</span><span class="skill-chip selected">Quinta</span>
+                    <span class="skill-chip selected">Sexta</span><span class="skill-chip">Sábado</span>
+                    <span class="skill-chip">Domingo</span>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between mt-4">
+                <button class="btn-back" onclick="nextStep(2)">← Voltar</button>
+                <button class="btn-next" onclick="nextStep(4)">Próximo →</button>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="form-step" id="step4">
+              <h5 style="color:#fff;margin-bottom:24px">📄 Documentos e foto</h5>
+              <div class="row g-3">
+                <div class="col-12">
+                  <label class="form-label">Foto de perfil</label>
+                  <div class="upload-area" onclick="this.querySelector('input').click()">
+                    <span style="font-size:2.5rem">📷</span>
+                    <p>Clique para enviar sua foto</p>
+                    <input type="file" accept="image/*" style="display:none">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">RG ou CNH (frente)</label>
+                  <div class="upload-area" onclick="this.querySelector('input').click()">
+                    <span style="font-size:1.8rem">📋</span>
+                    <p>Enviar documento</p>
+                    <input type="file" accept="image/*,application/pdf" style="display:none">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Comprovante de endereço</label>
+                  <div class="upload-area" onclick="this.querySelector('input').click()">
+                    <span style="font-size:1.8rem">🏠</span>
+                    <p>Enviar comprovante</p>
+                    <input type="file" accept="image/*,application/pdf" style="display:none">
+                  </div>
+                </div>
+              </div>
+              <p style="color:rgba(255,255,255,.4);font-size:.78rem;margin-top:16px">🔒 Seus documentos são
+                criptografados e usados apenas para verificação de identidade.</p>
+              <div class="d-flex justify-content-between mt-4">
+                <button class="btn-back" onclick="nextStep(3)">← Voltar</button>
+                <button class="btn-next" onclick="finishSignup()">Finalizar cadastro ✓</button>
+              </div>
+            </div>
+
+            <!-- Success -->
+            <div class="success-screen" id="successScreen">
+              <div class="success-icon">🎉</div>
+              <h3 style="color:#fff;margin-bottom:12px">Cadastro enviado!</h3>
+              <p style="color:rgba(255,255,255,.6);max-width:380px;margin:0 auto 28px">Você receberá um e-mail de
+                confirmação em breve. Nossa equipe verificará seus documentos em até 24h.</p>
+              <div
+                style="background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.2);border-radius:14px;padding:20px;max-width:340px;margin:0 auto">
+                <div style="color:#4ADE80;font-weight:700;margin-bottom:8px">✅ Próximos passos:</div>
+                <div style="color:rgba(255,255,255,.7);font-size:.88rem;text-align:left;line-height:2">
+                  1. Confirmar e-mail<br>
+                  2. Aguardar verificação (24h)<br>
+                  3. Completar perfil<br>
+                  4. Começar a receber pedidos!
+                </div>
+              </div>
+              <button class="btn-next mt-4" onclick="location.href='index.html'">Ir para o início</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer
+    style="background:#0D1117; color:rgba(255,255,255,.6); padding:40px 0;text-align:center;border-top:1px solid rgba(255,255,255,.08)">
+    <div class="container">
+      <div style="font-family:'Sora',sans-serif;font-weight:800;color:#fff;font-size:1.1rem;margin-bottom:8px">AloCare
+      </div>
+      <p style="font-size:.85rem; text-align:center;">© 2026.<br>Todos os direitos reservados.</p>
+      <div style="margin-top:12px; text-align:center;">
+        <a href="#" style="color:rgba(255,255,255,.4);font-size:.83rem;text-decoration:none;margin:0 10px">Termos de
+          Uso</a>
+        <a href="#"
+          style="color:rgba(255,255,255,.4);font-size:.83rem;text-decoration:none;margin:0 10px">Privacidade</a>
+        <a href="#" style="color:rgba(255,255,255,.4);font-size:.83rem;text-decoration:none;margin:0 10px">Suporte</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/quero-trabalhar.js"></script>
+</body>
+
+</html>
